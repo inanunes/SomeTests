@@ -7,23 +7,25 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button x:Name="btnDiscover" Content="Start Discover" Click="btnDiscover_Click" />
-            <TextBlock x:Name="txtDistance" Text="0" HorizontalAlignment="Center" FontSize="50"/>
-        </StackPanel>
-
-
-        <StackPanel Grid.Row="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button x:Name="btnAdvertise" Content="Start Advertise" Click="btnAdvertise_Click"/>
-            <TextBlock x:Name="txtStatus" HorizontalAlignment="Center" FontSize="50"/>
-        </StackPanel>
+    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+      <Button x:Name="btnDiscover" Content="Start Discover" Click="btnDiscover_Click" HorizontalAlignment="Center" />
+      <TextBlock x:Name="txtSignal" HorizontalAlignment="Center" FontSize="20" Margin="0,5,0,0"/>
+      <TextBlock x:Name="txtDistance" HorizontalAlignment="Center" FontSize="50" Margin="0,10,0,0"/>
+      <TextBlock x:Name="txtConnectionState" HorizontalAlignment="Center" FontSize="40" Margin="0,10,0,0"/>
+    </StackPanel>
 
 
-    </Grid>
+    <StackPanel Grid.Row="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed">
+      <Button x:Name="btnAdvertise" Content="Start Advertise" Click="btnAdvertise_Click"/>
+      <TextBlock x:Name="txtStatus" HorizontalAlignment="Center" FontSize="50"/>
+    </StackPanel>
+
+
+  </Grid>
 </Page>
